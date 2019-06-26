@@ -1,0 +1,36 @@
+点击事件：
+############js##########################################
+ data: {
+    text : "hello worlds",
+    btntext : "这是按钮的内容",
+    show : true,
+    news:['aaa','bbb','ccc'],
+  },
+  
+ btnclick:function()
+  {
+    var isshow=this.data.show
+    var newsdata=this.data.news
+    newsdata.shift()
+    console.log(isshow)
+    this.setData({text:"这是一个新的内容。。。",show:!isshow, news:newsdata})
+  }
+  
+##########wxml############################################
+  <include src="../templates/header"/>
+  <button type="default" hover-class="other-button-hover"> default </button>
+  <button type="primary" bindtap='btnclick'>{{btntext}} </button>
+  <view wx:if="{{show}}">{{text}}1</view>
+  <view wx:else>{{text}}2</view>
+  <view wx:for="{{news}}" wx:for-item="itemx">
+  {{index}}--{{itemx}}
+  </view>
+  <import src="../templates/footer"/>
+  <template is="footer2"/>
+  <!---->
+  
+  ####################事件######################
+  点击事件tap
+  长按事件longtap
+  触摸事件touchstart touchend touchmove touchcancel
+  submit input
