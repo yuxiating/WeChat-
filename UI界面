@@ -1,0 +1,6 @@
+#######################################################佈局基礎###############################################
+flex-direction      元素排列方向
+flex-wrap           元素換行
+flex-flow           flex-direction和flex-wrap間寫
+justify-content     元素在主軸上的對齊方式
+align-items         元素在交叉軸的對其方式
